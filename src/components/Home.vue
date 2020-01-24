@@ -25,10 +25,6 @@
                 <div class="form-group">
                     <input type="password" class="form-control"
                            placeholder="Digite sua senha" v-model="loginForm.password">
-
-                     <small>
-                         {{loginForm.password}}
-                     </small>
                 </div>
 
                 <div class="form-check small">
@@ -69,9 +65,6 @@
 </script>
 
 <style scoped>
-body {
-    background-color: whitesmoke !important;
-}
     .cursor-default {
         cursor: default;
     }
