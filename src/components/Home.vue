@@ -4,31 +4,37 @@
             <img alt="Lets logo" height="100px" src="../assets/logo.png">
         </div>
 
-        <!-- Simple text binded -->
-        <div class="text-center mt-5 col-12">
-          <span class="cursor-default" :title="alertTitle">
-              <i class="far fa-comments mr-1"></i>
-              {{ alertMessage }}
-          </span>
-        </div>
+        <div class="mt-5 mx-auto card p-4 w-25 very-rounded">
+            <!-- Simple text binded -->
+            <div class="text-center col-12">
+              <span class="cursor-default text-secondary font-weight-bold h5" :title="welcomeTitle">
+                  {{ welcomeMessage }}
+              </span>
+              <hr>
+            </div>
 
-        <div class="mt-4">
             <!-- Form binded -->
-            <form class="col-4 offset-4">
+            <form>
                 <div class="form-group">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Digite seu email" v-model="loginForm.email">
-                    <small id="emailHelp" class="form-text text-muted">Não iremos compartilhar seu email com ninguém</small>
+                    <input type="email" class="form-control" placeholder="Digite seu email"
+                           v-model="loginForm.email">
+                    <small id="emailHelp" class="form-text text-muted">Não iremos compartilhar seu email com
+                        ninguém</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha" v-model="loginForm.password">
+                    <input type="password" class="form-control"
+                           placeholder="Digite sua senha" v-model="loginForm.password">
+
+                     <small>
+                         {{loginForm.password}}
+                     </small>
                 </div>
 
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="keepConnected" v-model="loginForm.keepConnected">
-                    <label class="form-check-label" for="keepConnected">Mantenha-me conectado</label>
+                <div class="form-check small">
+                    <input type="checkbox" class="form-check-input" id="keepConnected"
+                           v-model="loginForm.keepConnected">
+                    <label class="form-check-label text-muted align-middle" for="keepConnected">Mantenha-me conectado</label>
                 </div>
 
                 <div class="text-right">
@@ -47,8 +53,8 @@
 
         data() {
             return {
-                alertMessage: 'Apresentação sobre Vue 2',
-                alertTitle: 'Exemplo de título',
+                welcomeMessage: 'Seja bem-vindo de volta!',
+                welcomeTitle: 'Fazer login na plataforma',
 
                 loginForm: {
                     email: '',
@@ -63,7 +69,14 @@
 </script>
 
 <style scoped>
+body {
+    background-color: whitesmoke !important;
+}
     .cursor-default {
         cursor: default;
+    }
+
+    .very-rounded {
+        border-radius: 30px;
     }
 </style>
