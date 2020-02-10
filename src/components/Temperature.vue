@@ -1,7 +1,8 @@
 <template>
     <span>
-        {{value}}º
-        {{measureUnit}}
+        <span class="display-1">
+            {{value}}º
+        </span>
     </span>
 </template>
 

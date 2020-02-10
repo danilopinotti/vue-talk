@@ -1,10 +1,10 @@
 <template>
     <span>
-        <button class="btn btn-danger btn-sm" @click="heatUp">
-            <i class="fa fa-plus"></i>
+        <button class="btn btn-danger btn-md" @click="heatUp">
+            <i class="fa fa-fire"></i>
         </button>
-        <button class="btn btn-info btn-sm" @click="coolDown">
-            <i class="fa fa-minus"></i>
+        <button class="btn btn-info btn-md" @click="coolDown">
+            <i class="fa fa-snowflake"></i>
         </button>
     </span>
 </template>

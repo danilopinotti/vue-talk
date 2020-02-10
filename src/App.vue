@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <Home/>
-  </div>
+    <div id="app" class="h-100">
+        <Home/>
+    </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+    import Home from './components/Home.vue'
 
-export default {
-  name: 'app',
-  components: {
-    Home
-  }
-}
+    export default {
+        name: 'app',
+        components: {
+            Home
+        }
+    }
 </script>
 
 <style>
-body {
-    background-color: whitesmoke !important;
-}
+    html,
+    body {
+        height: 100%;
+    }
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    body {
+        background-color: whitesmoke !important;
+    }
+
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 </style>

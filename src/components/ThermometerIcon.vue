@@ -19,7 +19,7 @@
                     return ['fa-thermometer-three-quarters', 'text-warning'];
 
                 if (this.temperature >= 20)
-                    return ['fa-thermometer-half'];
+                    return ['fa-thermometer-half', 'text-white'];
 
                 if (this.temperature >= 10)
                     return ['fa-thermometer-quarter', 'text-primary'];
