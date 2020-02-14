@@ -22,7 +22,7 @@
     }
 
     body {
-        background-color: whitesmoke !important;
+        background-color: #f3f3f3 !important;
     }
 
     #app {

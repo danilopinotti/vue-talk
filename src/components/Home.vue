@@ -1,28 +1,28 @@
 <template>
     <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="bg-black-transparent p-5">
+        <div class="bg-dark-grey p-5 w-25 rounded-20">
 
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12 text-center">
                     <Icon :temperature="temperatureNow" class="fa-6x"></Icon>
                 </div>
             </div>
 
-            <div class="row mt-2">
+            <div class="row mt-5 mb-5">
                 <div class="col-12 text-center text-white">
                     <Temperature
                             :value="temperatureNow"
-                            :measure-unit="'Celcius'">
+                            :font-weight-bold="false">
                     </Temperature>
                 </div>
             </div>
 
-            <div class="row mt-5 mb-0">
+            <div class="row mb-5">
                 <div class="col-12 text-center">
                     <Thermostat
-                            :step="3"
-                            @heatUp="heatUpTemperature"
-                            @coolDown="coolDownTemperature">
+                            :step="2"
+                            @heat-up="heatUpTemperature"
+                            @cool-down="coolDownTemperature">
                     </Thermostat>
                 </div>
             </div>
@@ -63,13 +63,11 @@
 </script>
 
 <style>
-    body {
-        background-position-x: 0;
-        background-image: url('../assets/bg-trees.jpg');
-        background-size: 100% 100%;
+    .bg-dark-grey {
+        background-color: #3c3c3c;
     }
 
-    .bg-black-transparent {
-        background-color: rgba(0, 0, 0, 0.60);
+    .rounded-20 {
+        border-radius: 20px;
     }
 </style>

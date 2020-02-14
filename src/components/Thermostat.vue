@@ -1,10 +1,10 @@
 <template>
     <span>
-        <button class="btn btn-danger btn-md" @click="heatUp">
-            <i class="fa fa-fire"></i>
-        </button>
         <button class="btn btn-info btn-md" @click="coolDown">
             <i class="fa fa-snowflake"></i>
+        </button>
+        <button class="btn btn-danger btn-md ml-1" @click="heatUp">
+            <i class="fa fa-fire"></i>
         </button>
     </span>
 </template>
@@ -22,16 +22,12 @@
 
         methods: {
             heatUp() {
-                this.$emit('heatUp', this.step)
+                this.$emit('heat-up', this.step)
             },
 
             coolDown() {
-              this.$emit('coolDown', this.step)
+                this.$emit('cool-down', this.step)
             },
         }
     }
 </script>
-
-<style scoped>
-
-</style>

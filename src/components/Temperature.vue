@@ -1,6 +1,6 @@
 <template>
     <span>
-        <span class="display-1">
+        <span class="display-1" :class="{'font-weight-bold': fontWeightBold}">
             {{value}}º
         </span>
     </span>
@@ -13,13 +13,10 @@
         props: {
             value: Number,
 
-            measureUnit: {
+            fontWeightBold: {
                 required: false,
-                default: 'Celcius',
-                validator: function (value) {
-                    const validUnits = ['Celcius', 'Fahrenheit'];
-                    return validUnits.indexOf(value) !== -1
-                }
+                type: Boolean,
+                default: false,
             },
         }
     }

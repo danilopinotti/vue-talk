@@ -13,18 +13,18 @@
         computed: {
             iconClasses() {
                 if (this.temperature >= 45)
-                    return ['fa-temperature-high', 'text-danger'];
+                    return ['fa-thermometer-full', 'text-danger'];
 
                 if (this.temperature >= 30)
                     return ['fa-thermometer-three-quarters', 'text-warning'];
 
                 if (this.temperature >= 20)
-                    return ['fa-thermometer-half', 'text-white'];
+                    return ['fa-thermometer-half', 'text-primary'];
 
                 if (this.temperature >= 10)
-                    return ['fa-thermometer-quarter', 'text-primary'];
+                    return ['fa-thermometer-quarter', 'text-info'];
 
-                return ['fa-temperature-low', 'text-info'];
+                return ['fa-thermometer-empty', 'text-white'];
             }
         }
     }
